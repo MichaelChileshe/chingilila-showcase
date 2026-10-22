@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#12030a" />
+    <meta name="description" content="A full demo night of Chingilila, step by step: a room of phones, attacks on the AI, a mule ring uncovered and frozen by a person, sealed evidence and live compliance proof." />
+    <meta property="og:title" content="Chingilila: the demo night, step by step" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="brand/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Chingilila · The demo night</title>
+    <style>
+      :root {
+        --night: #12030a;
+        --burgundy: #7d1736;
+        --wine: #4a0d1f;
+        --rose: #e84868;
+        --brass: #a9844d;
+        --brass-light: #c4a265;
+        --cream: #fbf5ea;
+        --cream-2: #f3e9d8;
+        --ink: #2a1219;
+        --ink-soft: #6b5359;
+        --line: rgba(74, 13, 31, 0.12);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--cream); color: var(--ink);
+        font: 400 17px/1.6 Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--burgundy); }
+      .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+      header.top {
+        position: sticky; top: 0; z-index: 10; background: rgba(251, 245, 234, 0.9);
+        backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+      }
+      header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+      .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+      .brand img { width: 34px; height: 36px; object-fit: contain; }
+      .brand b { font: 600 20px/1 "Cormorant Garamond", serif; letter-spacing: 0.18em; }
+      .back { font-weight: 600; font-size: 14px; text-decoration: none; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+      .back:hover { border-color: var(--brass); }
+
+      .hero { background: var(--night); color: var(--cream); padding: 72px 0 56px; position: relative; overflow: hidden; }
+      .hero::before {
+        content: ""; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 70% 40%, rgba(125, 23, 54, 0.55), transparent 60%), radial-gradient(ellipse at 10% 10%, rgba(169, 132, 77, 0.18), transparent 45%);
+      }
+      .hero .wrap { position: relative; }
+      .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass-light); margin: 0 0 14px; }
+      h1 { font: 600 clamp(38px, 6vw, 68px)/1.04 "Cormorant Garamond", serif; margin: 0 0 18px; max-width: 16ch; }
+      .lead { font-size: clamp(16px, 2vw, 19px); color: rgba(251, 245, 234, 0.82); max-width: 62ch; margin: 0; }
+      .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+      .fact { border: 1px solid rgba(196, 162, 101, 0.3); border-radius: 14px; padding: 16px 18px; background: rgba(251, 245, 234, 0.04); }
+      .fact strong { display: block; font: 600 34px/1 "Cormorant Garamond", serif; color: var(--cream); }
+      .fact span { font-size: 13px; color: rgba(251, 245, 234, 0.7); }
+
+      main { padding: 24px 0 40px; }
+      .act { padding: 56px 0 8px; }
+      .act-head { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px 18px; align-items: start; margin-bottom: 22px; }
+      .num { font: 600 44px/1 "Cormorant Garamond", serif; color: var(--burgundy); }
+      .act h2 { font: 600 clamp(28px, 3.6vw, 40px)/1.1 "Cormorant Garamond", serif; margin: 2px 0 8px; }
+      .act p { margin: 0; color: var(--ink-soft); max-width: 70ch; }
+      .shots { display: grid; gap: 16px; }
+      .shots.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .shots.narrow-right { grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); align-items: start; }
+      figure { margin: 0; }
+      figure a { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(46, 7, 19, 0.12); background: #fff; }
+      figure img { display: block; width: 100%; height: auto; }
+      figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
+
+      .note { margin-top: 64px; padding: 28px; border-radius: 16px; background: var(--cream-2); border: 1px solid var(--line); }
+      .note h3 { font: 600 26px/1.2 "Cormorant Garamond", serif; margin: 0 0 8px; }
+      .note p { margin: 0 0 8px; color: var(--ink-soft); }
+      .note p:last-child { margin: 0; }
+
+      footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 14px; color: var(--ink-soft); }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
+      footer nav { display: flex; flex-wrap: wrap; gap: 16px; }
+
+      @media (max-width: 820px) {
+        .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .shots.two, .shots.narrow-right { grid-template-columns: minmax(0, 1fr); }
+        .act-head { grid-template-columns: minmax(0, 1fr); }
+        .num { font-size: 32px; }
+        .hero { padding: 52px 0 40px; }
+        .brand b { font-size: 17px; letter-spacing: 0.12em; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="index.html"><img src="brand/mark-light.webp" alt="" /><b>CHINGILILA</b></a>
+        <a class="back" href="index.html">About Chingilila</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">The demo night · step by step</p>
+        <h1>A whole room, protected live.</h1>
+        <p class="lead">
+          I rehearsed the full show the way it runs on the night: a room of phones joins a mobile money app,
+          chats with its AI assistant, tries to break it, and hides two money mule rings in the crowd. These are
+          real screens from that run, not mock-ups.
+        </p>
+        <div class="facts">
+          <div class="fact"><strong>60</strong><span>phones in the room</span></div>
+          <div class="fact"><strong>0</strong><span>server errors under load</span></div>
+          <div class="fact"><strong>2 of 2</strong><span>mule rings caught</span></div>
+          <div class="fact"><strong>0</strong><span>innocent people in a case</span></div>
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap">
+      <section class="act" id="room">
+        <div class="act-head">
+          <span class="num">01</span>
+          <div>
+            <h2>The room arrives</h2>
+            <p>Every phone that scans in becomes a star in the galaxy. Every transfer is light moving between them, and every one is scored the moment it happens. Honest money glows white and gold.</p>
+          </div>
+        </div>
+        <div class="shots">
+          <figure><a href="shots/01-room.webp"><img src="shots/01-room.webp" alt="The Command Center Overview with a calm galaxy of wallets and transfers" loading="lazy" /></a></figure>
+        </div>
+      </section>
+
+      <section class="act" id="attacks">
+        <div class="act-head">
+          <span class="num">02</span>
+          <div>
+            <h2>"Now try to hack the AI"</h2>
+            <p>The room tries prompt injection, fake system messages, base64 disguises and emotional tricks. Shield stops each one before the assistant ever sees it, and shows which of its six layers did the stopping.</p>
+          </div>
+        </div>
+        <div class="shots two">
+          <figure><a href="shots/02-attack.webp"><img src="shots/02-attack.webp" alt="An Attack blocked card over the galaxy during the attack wave" loading="lazy" /></a><figcaption>Attacks land while the money keeps moving untouched.</figcaption></figure>
+          <figure><a href="shots/03-shield.webp"><img src="shots/03-shield.webp" alt="AI Shield showing a disguised attack stopped at the signature rules layer" loading="lazy" /></a><figcaption>A base64-disguised injection, decoded and stopped at layer 1.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="act" id="strike">
+        <div class="act-head">
+          <span class="num">03</span>
+          <div>
+            <h2>Chingilila attacks itself</h2>
+            <p>Strike fires real attack techniques mapped to the OWASP Top 10 for LLM applications at Shield, plus fresh attacks written by an AI for each run. This run held every one of them.</p>
+          </div>
+        </div>
+        <div class="shots">
+          <figure><a href="shots/04-strike.webp"><img src="shots/04-strike.webp" alt="Strike results: 100 percent held, 16 blocked by Shield, 12 contained by the scoped AI, 0 breaches" loading="lazy" /></a></figure>
+        </div>
+      </section>
+
+      <section class="act" id="ring">
+        <div class="act-head">
+          <span class="num">04</span>
+          <div>
+            <h2>The ring is uncovered</h2>
+            <p>Victims pay a mule, and the mule, opened on the boss's phone, empties its wallet into the boss's. Trace holds the transfer, Fuse links the ring and opens a case with the evidence. Only the ring turns red. The people who played honestly stay gold.</p>
+          </div>
+        </div>
+        <div class="shots two">
+          <figure><a href="shots/05-ring.webp"><img src="shots/05-ring.webp" alt="Two small red rings in the galaxy and a decision card to authorise the freeze" loading="lazy" /></a><figcaption>Two rings, two wallets each, waiting for a person to decide.</figcaption></figure>
+          <figure><a href="shots/06-case.webp"><img src="shots/06-case.webp" alt="The case file with the transfer, its reason codes and the machine-learning explanation" loading="lazy" /></a><figcaption>Every conclusion comes with reasons a person can check.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="act" id="freeze">
+        <div class="act-head">
+          <span class="num">05</span>
+          <div>
+            <h2>A person decides the freeze</h2>
+            <p>Chingilila builds the case. An analyst authorises the freeze. Ice spreads along the ring's own money trail, the phones in the ring lock at once, and the decision is recorded under the analyst's name.</p>
+          </div>
+        </div>
+        <div class="shots">
+          <figure><a href="shots/07-freeze.webp"><img src="shots/07-freeze.webp" alt="The ring frozen in ice in the galaxy, with containment active" loading="lazy" /></a></figure>
+        </div>
+      </section>
+
+      <section class="act" id="evidence">
+        <div class="act-head">
+          <span class="num">06</span>
+          <div>
+            <h2>Evidence that holds up</h2>
+            <p>Each case exports as a sealed evidence pack. Change a single number in it and the seal breaks. Retention follows Zambian law: transfers and cases are kept for at least ten years, and customers' everyday questions are deleted after seven days.</p>
+          </div>
+        </div>
+        <div class="shots two">
+          <figure><a href="shots/08-vault-intact.webp"><img src="shots/08-vault-intact.webp" alt="Vault verifying an evidence pack as intact" loading="lazy" /></a><figcaption>The original pack: intact.</figcaption></figure>
+          <figure><a href="shots/09-vault-tampered.webp"><img src="shots/09-vault-tampered.webp" alt="Vault showing an edited evidence pack as tampered" loading="lazy" /></a><figcaption>One amount changed from K895 to K995: tampered.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="act" id="learn">
+        <div class="act-head">
+          <span class="num">07</span>
+          <div>
+            <h2>Learning, with a person deciding</h2>
+            <p>Forge turns a new attack into a Shield rule. It suggests patterns from words that never appear in everyday customer messages, tests them against those messages, and puts nothing live until an analyst approves it by name.</p>
+          </div>
+        </div>
+        <div class="shots">
+          <figure><a href="shots/10-forge.webp"><img src="shots/10-forge.webp" alt="Forge suggesting detection patterns for a leetspeak attack" loading="lazy" /></a></figure>
+        </div>
+      </section>
+
+      <section class="act" id="compliance">
+        <div class="act-head">
+          <span class="num">08</span>
+          <div>
+            <h2>Compliance with live proof</h2>
+            <p>Each control is mapped to the standard it answers, with proof the system produces itself: OWASP LLM Top 10, Zambia's Financial Intelligence Centre Act and Data Protection Act, and ISO/IEC 27001. The site's own OWASP ZAP scan is kept on record.</p>
+          </div>
+        </div>
+        <div class="shots narrow-right">
+          <figure><a href="shots/11-compliance.webp"><img src="shots/11-compliance.webp" alt="The Compliance view with live proof on each OWASP control" loading="lazy" /></a></figure>
+          <figure><a href="shots/12-zap.webp"><img src="shots/12-zap.webp" alt="OWASP ZAP baseline result: 0 high, 0 medium, 0 low" loading="lazy" /></a><figcaption>OWASP ZAP baseline: 0 high, 0 medium, 0 low.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="act" id="stage">
+        <div class="act-head">
+          <span class="num">09</span>
+          <div>
+            <h2>What the room sees</h2>
+            <p>Stage mode puts the night on the big screen: the room as a galaxy, every tap traced through the architecture, and the night's numbers at the end.</p>
+          </div>
+        </div>
+        <div class="shots">
+          <figure><a href="shots/13-stage-galaxy.webp"><img src="shots/13-stage-galaxy.webp" alt="Stage mode galaxy with both rings frozen" loading="lazy" /></a></figure>
+          <div class="shots two">
+            <figure><a href="shots/14-stage-hood.webp"><img src="shots/14-stage-hood.webp" alt="Under the hood: the path every tap took through the system" loading="lazy" /></a><figcaption>Under the hood, with the room's own numbers.</figcaption></figure>
+            <figure><a href="shots/15-stage-reveal.webp"><img src="shots/15-stage-reveal.webp" alt="The reveal: Chingilila protected 62 people" loading="lazy" /></a><figcaption>The reveal.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <div class="note">
+        <h3>About this page</h3>
+        <p>The names in these screens are simulated phones from a rehearsal, and the money is play money. Addresses of the live system are blurred on purpose.</p>
+        <p>Chingilila's source code is private. If you work at a bank, a microfinance institution or a mobile money provider and want a pilot, <a href="mailto:michael_chileshe@outlook.com?subject=Chingilila%20pilot">get in touch</a>.</p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Built in Lusaka by Michael Chileshe</span>
+        <nav>
+          <a href="index.html">About Chingilila</a>
+          <a href="https://www.linkedin.com/in/michael-chileshe-3b6215403" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a href="https://github.com/MichaelChileshe" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
